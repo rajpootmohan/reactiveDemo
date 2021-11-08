@@ -26,7 +26,7 @@ import java.util.Map;
 @Configuration
 public class KafkaFactory {
 
-  /**
+/*
    * At least once semantics: If a producer ack times out or receives an error, it might retry
    * sending the message assuming that the message was not written to the Kafka topic. If the broker
    * had failed right before it sent the ack but after the message was successfully written to the
@@ -35,7 +35,8 @@ public class KafkaFactory {
    * <p>
    * Producer is configured to send at least once. So we must make sure that we de-duplicate message
    * in each consumer to prevent double processing.
-   */
+*/
+
 
   public static final String INVENTORY_CONSUMER_GROUP_LABEL = ".inventory.group";
   public static final String ORDER_CONSUMER_GROUP_LABEL = ".order.group";

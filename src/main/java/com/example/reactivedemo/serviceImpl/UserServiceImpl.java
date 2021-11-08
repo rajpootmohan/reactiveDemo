@@ -4,7 +4,6 @@ import com.example.reactiveDemo.configuration.GitHubServiceGenerator;
 import com.example.reactiveDemo.model.User;
 import com.example.reactiveDemo.service.UserServiceApi;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;

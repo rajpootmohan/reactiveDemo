@@ -58,7 +58,7 @@ public class QuoteBlockingController {
 
     @GetMapping("/produceQuote")
     public Mono<Void> produceMessage() {
-        return null; //demoProducer.produce();
+        return demoProducer.produce();
     }
 
 }

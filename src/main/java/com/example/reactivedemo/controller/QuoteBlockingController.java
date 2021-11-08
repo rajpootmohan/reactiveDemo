@@ -1,11 +1,11 @@
 package com.example.reactiveDemo.controller;
 
-import com.example.reactiveDemo.model.Quote;
 import com.example.reactiveDemo.kafka.DemoProducer;
+import com.example.reactiveDemo.model.Quote;
+//import com.example.reactiveDemo.kafka.DemoProducer;
 import com.example.reactiveDemo.repository.QuoteMongoBlockingRepository;
 import com.example.reactiveDemo.repository.QutoMongoBlockingRepositoryCustom;
-import com.example.reactiveDemo.service.QuoteMongoRepositoryImpl;
-import com.tiket.tix.common.monitor.aspects.Monitor;
+//import com.tiket.tix.common.monitor.aspects.Monitor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -58,7 +58,7 @@ public class QuoteBlockingController {
 
     @GetMapping("/produceQuote")
     public Mono<Void> produceMessage() {
-        return demoProducer.produce();
+        return null; //demoProducer.produce();
     }
 
 }

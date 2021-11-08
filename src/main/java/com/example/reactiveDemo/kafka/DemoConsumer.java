@@ -3,9 +3,6 @@ package com.example.reactiveDemo.kafka;
 import com.example.reactiveDemo.model.Quote;
 import com.example.reactiveDemo.repository.QuoteMongoReactiveRepository;
 import com.tiket.tix.common.monitor.StatsDClientWrapper;
-import com.tiket.tix.common.monitor.aspects.Monitor;
-import com.tiket.tix.common.monitor.aspects.MonitorAspect;
-import com.tiket.tix.common.monitor.enums.ErrorCode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +13,6 @@ import reactor.core.publisher.Mono;
 import reactor.kafka.receiver.ReceiverOffset;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
 
 import static com.example.reactiveDemo.kafka.KafkaFactory.CONSUMER_RECEIVE_CONCURRENCY;
@@ -80,8 +76,8 @@ public class DemoConsumer {
                     .doOnNext(x -> {
                         System.out.println("in dofinally: " + x);
 //                        long startTime = System.nanoTime();
-                        statsDClientWrapper.monitor("myTopic", Monitor.ServiceGroup.ES, ErrorCode.SUCCEED,
-                                TimeUnit.MILLISECONDS.convert(System.nanoTime() - ai.get(), TimeUnit.NANOSECONDS));
+//                        statsDClientWrapper.monitor("myTopic", Monitor.ServiceGroup.ES, ErrorCode.SUCCEED,
+//                                TimeUnit.MILLISECONDS.convert(System.nanoTime() - ai.get(), TimeUnit.NANOSECONDS));
                     })
                     .subscribe();
         };

@@ -1,7 +1,7 @@
 package com.example.reactiveDemo.kafka;
 
 import com.example.reactiveDemo.model.Quote;
-import com.tiket.tix.common.monitor.aspects.MonitorAspect;
+//import com.tiket.tix.common.monitor.aspects.MonitorAspect;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

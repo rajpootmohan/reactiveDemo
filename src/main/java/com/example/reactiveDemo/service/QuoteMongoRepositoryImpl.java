@@ -17,12 +17,12 @@ public class QuoteMongoRepositoryImpl implements QutoMongoBlockingRepositoryCust
 
     private static final Logger LOGGER = LoggerFactory.getLogger(QuoteBlockingController.class);
 
-    @Autowired
-    private ReactiveMongoTemplate reactiveMongoTemplate;
+//    @Autowired
+//    private ReactiveMongoTemplate reactiveMongoTemplate;
 
     @Override
-    public List<Quote> findTop(int a) {
-        LOGGER.info("Calling findTop in repository......" + a);
+    public List<Quote> findTop() {
+        LOGGER.info("Calling findTop in repository......");
         List<Quote> quotes = new ArrayList<>();
         quotes.add(new Quote("1", "first", "first book 1"));
         return quotes;

@@ -5,8 +5,8 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
+//@Repository
 public interface QutoMongoBlockingRepositoryCustom {
 
-    List<Quote> findTop(int a);
+    List<Quote> findTop();
 }

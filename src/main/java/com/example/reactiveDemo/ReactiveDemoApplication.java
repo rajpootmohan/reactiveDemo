@@ -4,13 +4,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
-@SpringBootApplication
-@ComponentScan({"com.tiket.tix", "com.example.reactiveDemo"})
-//@SpringBootApplication( scanBasePackages = {"com.tiket.tix.*", "com.example.reactiveDemo.*"})
-//@EnableMongoRepositories
-//@EnableAspectJAutoProxy
-//@EnableAutoConfiguration
+
+@SpringBootApplication( scanBasePackages = {"com.example.reactiveDemo", "com.tiket.tix"})
+@EnableMongoRepositories
 public class ReactiveDemoApplication {
 
 	public static void main(String[] args) {

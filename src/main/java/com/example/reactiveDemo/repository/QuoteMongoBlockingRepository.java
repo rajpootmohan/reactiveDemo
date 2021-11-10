@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
+//@Repository
 public interface QuoteMongoBlockingRepository extends PagingAndSortingRepository<Quote, String> {
 
     List<Quote> findAllByIdNotNullOrderByIdAsc(final Pageable page);

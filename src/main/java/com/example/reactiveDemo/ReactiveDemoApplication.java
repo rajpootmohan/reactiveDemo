@@ -3,6 +3,7 @@ package com.example.reactiveDemo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
@@ -16,7 +17,7 @@ public class ReactiveDemoApplication {
 		SpringApplication.run(ReactiveDemoApplication.class, args);
 
 //		ConfigurableApplicationContext context = SpringApplication.run(ReactiveDemoApplication.class, args);
-//		Object o = context.getBeanFactory().getBean(CustomFilter.java.class);
+//¯		Object o = context.getBeanFactory().getBean(CustomFilter.java.class);
 
 	}
 
